@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuniaSherjill</title>
+    <link rel="stylesheet" href="sherjill 22.css">
+</head>
+<body>
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="logo">DuniaSherjill</div>
+        <nav>
+            <ul>
+                <li><a data-target="domain" class="active">Domain</a></li>
+                <li><a data-target="hosting">Hosting</a></li>
+                <li><a data-target="ekstensi">Ekstensi</a></li>
+                <li><a data-target="layanan">Layanan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- DOMAIN -->
+        <section id="domain" class="active">
+            <h1>Domain</h1>
+            <img src="sher.jfif" width="500" height="200">
+            <p><strong>Domain</strong> adalah alamat unik dari sebuah website di internet, seperti 
+                <em>www.duniasherjill.com</em>. Fungsinya untuk mempermudah pengguna mengakses website tanpa harus 
+                mengingat alamat IP yang panjang.</p>
+            <h2>Fungsi Domain</h2>
+            <ul>
+                <li>Memudahkan pengunjung mengingat alamat website.</li>
+                <li>Memberikan identitas profesional bagi bisnis atau individu.</li>
+                <li>Meningkatkan kepercayaan dan branding online.</li>
+            </ul>
+            <h2>Contoh Domain</h2>
+            <ul>
+                <li>google.com</li>
+                <li>tokopedia.com</li>
+                <li>instagram.com</li>
+            </ul>
+        </section>
+
+        <!-- HOSTING -->
+        <section id="hosting">
+            <h1>Hosting</h1>
+            <img src="hos.webp" width="500" height="200">
+            <p><strong>Hosting</strong> adalah tempat menyimpan semua file website Anda seperti gambar, teks, dan kode,
+                agar bisa diakses pengunjung melalui internet.</p>
+            <h2>Fungsi Hosting</h2>
+            <ul>
+                <li>Menyimpan data website agar selalu online.</li>
+                <li>Melindungi data dengan keamanan server.</li>
+                <li>Meningkatkan kecepatan dan performa website.</li>
+            </ul>
+            <h2>Contoh Hosting</h2>
+            <ul>
+                <li>Hostinger</li>
+                <li>Niagahoster</li>
+                <li>DewaWeb</li>
+                <li>DomaiNesia</li>
+                <li>IDWebhost</li>
+            </ul>
+        </section>
+
+        <!-- EKSTENSI -->
+        <section id="ekstensi">
+            <h1>Ekstensi Domain</h1>
+            <img src="images.png" width="500" height="200">
+            <p><strong>Ekstensi domain</strong> adalah bagian akhir dari alamat domain yang menunjukkan jenis atau kategori website tersebut.</p>
+            <h2>Jenis Ekstensi Domain</h2>
+            <ul>
+                <li><strong>.com</strong> — komersial</li>
+                <li><strong>.org</strong> — organisasi</li>
+                <li><strong>.net</strong> — jaringan</li>
+                <li><strong>.id</strong> — website Indonesia</li>
+                <li><strong>.edu</strong> — pendidikan</li>
+            </ul>
+        </section>
+
+        <!-- LAYANAN -->
+        <section id="layanan">
+            <h1>Layanan Hosting & Domain</h1>
+            <img src="Penyedia-Hosting-Terbaik-di-Indonesia.jpg.webp" width="500" height="200">
+            <p>Kami merekomendasikan beberapa penyedia layanan hosting dan domain terbaik di Indonesia maupun internasional:</p>
+            <ul>
+                <li>Niagahoster</li>
+                <li>Hostinger</li>
+                <li>Jagoan hosting</li>
+                <li>Rumah web</li>
+                <li>Dewa webt</li>
+            </ul>
+            <p>Fitur layanan: SSL gratis, backup otomatis, dan dukungan pelanggan 24 jam.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DuniaSherjill | Semua Hak Dilindungi</p>
+    </footer>
+
+    <script>
+        // Script Navigasi Halaman
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Hapus aktif di semua link
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                // Tampilkan section sesuai data-target
+                const target = link.getAttribute('data-target');
+                sections.forEach(sec => {
+                    sec.classList.remove('active');
+                    if (sec.id === target) sec.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
